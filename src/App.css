@@ -1,0 +1,107 @@
+.main{
+  height: 100vh;
+  width: 100vw;
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #666;
+  overflow: hidden;
+}
+
+.inputFields{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputFields h1{
+  color: rgb(34, 222, 255);
+}
+
+.inputFields input{
+  margin: 6px 0;
+  padding: 4px;
+  border-radius: 4px;
+  background-color: #444;
+
+}
+
+.result h1{
+  transition: opacity 0.5s ease-in-out;
+}
+
+.buttons{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+}
+
+.buttons button{
+  width: 100%;
+  margin: 6px 0;
+  padding: 6px 8px;
+  border-radius: 4px;
+  background-color: #444;
+  color: #999;
+}
+
+.container{
+  width: 100%;
+  height: 100px;
+}
+
+.parent{
+  position: relative;
+  transform: translateX(80vw);
+}
+
+.parent:first-child{
+  position: absolute;
+}
+
+.parent img:nth-of-type(2){
+  position: absolute;
+  bottom: 50px;
+  left: 13px;
+  width:28px;
+  height:28px;
+}
+
+.parent img:nth-of-type(3){
+  position: absolute;
+  bottom: 50px;
+  right: 19px;
+  width:28px;
+  height:28px;
+}
+
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes run {
+  from {
+    transform: translateX(80vw);
+  }
+  to {
+    transform: translateX(10vw);
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+
+  .parent{
+  transform: translateX(60vw);
+  }
+}
